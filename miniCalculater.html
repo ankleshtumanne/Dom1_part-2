@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #inp1{
+            margin-left: 20%;
+            font-size: 30px;
+            margin-top: 50px;
+        }
+        #inp2{
+            font-size: 30px;
+            margin-top: 50px;
+        }
+        .st1{
+            font-size: 30px;
+            margin-left: 20%;
+            margin-top: 50px;
+        }
+        .st2{
+            font-size: 30px;
+            margin-left: 5%;
+            margin-top: 50px;
+        }
+        .st3{
+            font-size: 30px;
+            margin-left: 5%;
+            margin-top: 50px;
+        }
+        .st4{
+            font-size: 30px;
+            margin-left: 5%;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <input type="number"  name="" placeholder="Enter 1st number" id="inp1"> <input type="number"placeholder="Enter 2nd Number" name="" id="inp2">
+   <br>
+    <button class="st1" onclick="add()">Add</button>
+    <button class="st2" onclick="subtract()">Subtract</button>
+    <button class="st3" onclick="multiply()">Multiply</button>
+    <button class="st4" onclick="divide()">Divide</button>
+</body>
+</html>
+<script>
+    let input1=document.getElementById('inp1')
+    let input2=document.getElementById('inp2')
+
+    function add(){
+        let output =Number(input1.value)+Number(input2.value)
+        alert(output)
+    }
+    function subtract(){
+        let output =Number(input1.value)-Number(input2.value)
+        alert(output)
+    }
+    function multiply(){
+        let output =Number(input1.value)*Number(input2.value)
+        alert(output)
+    }
+    function divide(){
+        let output =Number(input1.value)/Number(input2.value)
+        alert(output)
+    }
+
+
+</script>
