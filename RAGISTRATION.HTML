@@ -7,8 +7,8 @@
 	<input type="text" name="name" id="name">
 	<select id="gender">
 		<option value="">--</option>
-		<option value="male">M</option>
-		<option value="female">F</option>
+		<option value="Male">M</option>
+		<option value="Female">F</option>
 	</select>
 	<input type="text" name="email" id="email">
 	<input type="text" name="mobile" id="mobile">
@@ -18,38 +18,59 @@
 	<h3 id="dEmail">EMAIL</h3>
 	<h4 id="dMobile">MOBILE</h4>
 	<hr>
-	<button onclick="showName()">NAME</button>
+	<button  onclick="showName()">NAME</button>
 	<button onclick="showGender()">GENDER</button>
 	<button onclick="showEmail()">EMAIL</button>
 	<button onclick="showMobile()">MOBILE</button>
 	<button onclick="resetForm()">RESET FORM</button>
 	<button onclick="resetDisplay()">RESET DISPLAY</button>
 	<script type="text/javascript">
-        let head=document.getElementById('dName')
+        // let head=document.getElementById('dName')
 
+		let input1=document.getElementById('name')
+		let input2=document.getElementById('email')
+		let input3=document.getElementById('mobile')
+		let input4=document.getElementById('gender')
+		let id1=document.getElementById('dName')
+		let id2=document.getElementById('dGender')
+		let id3=document.getElementById('dEmail')
+		let id4=document.getElementById('dMobile')
+       
 		function showName() {
 			// Show filled name inside h1
-            console.log(head.value)
+
+			var nameInput = document.getElementById('name');
+            document.getElementById('dName').innerText = nameInput.value;
 		}
 
 		function showGender() {
 			// Show the selected gender inside h2
+			id2.innerText=input4.value
 		}
 
 		function showEmail() {
 			// Show the filled email inside h3
+			id3.innerText=input2.value
 		}
 
 		function showMobile() {
 			// Show the filled mobile inside h4
+			id4.innerText=input3.value
 		}
 
 		function resetForm() {
 			// Reset all the form elements to default values (blank "")
+			id1.innerHTML="<h1>NAME</h1>"
+			id2.innerHTML="<h2 >GENDER</h2>"
+			id3.innerHTML="<h3 >EMAIL</h3>"
+			id4.innerHTML="<h4 >MOBILE</h4>"
+
+
 		}
 
 		function resetDisplay() {
 			// Reset all the headings (h1, h2, h3, h4) to blank values
+			location.reload()
 		}
 	</script>
 </body>
